@@ -160,12 +160,12 @@
         // フレームの更新
         ////////////////////////////
         var lastTime = null;
+        var rotation = 0.0;// 物体を回す角度
 
         // 射影行列の生成
         var mat = new matIV();// 行列のシステムのオブジェクト
         var pMatrix   = mat.identity(mat.create());// 射影行列
         mat.perspective(60, canvas.width / canvas.height, 0.01, 10.0, pMatrix);// 射影行列の生成
-        var rotation = 0.0;// 物体を回す角度
 
         function update(timestamp){
             // 更新間隔の取得
